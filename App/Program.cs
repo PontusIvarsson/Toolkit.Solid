@@ -1,4 +1,5 @@
-﻿using System;
+﻿using App._1_S;
+using System;
 
 namespace App
 {
@@ -6,7 +7,13 @@ namespace App
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var s = new S();
+            var s_followed = new S_Followed(new Output());
+            s.ShowMePrinciple();
+            s_followed.ShowMePrinciple();
+
+
+            Console.ReadKey();
         }
     }
 }

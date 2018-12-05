@@ -4,16 +4,11 @@ using System.Text;
 
 namespace App._1_S
 {
-    class S
-    {
 
-        public void ShowMePrinciple()
-        {
-            Console.WriteLine("Single Responsibility Principle (SRP)");
-            Console.WriteLine(string.Format("SRP says: {0}", "Every software module should have only one reason to change"));
-        }
-    }
-
+    /// <summary>
+    /// Every software module should have only one reason to change.
+    /// If we want to write to other output, the class does not need to change.
+    /// </summary>
     class S_Followed
     {
         private Output output;
@@ -30,7 +25,7 @@ namespace App._1_S
         }
     }
 
-    public class Output 
+    public class Output
     {
 
         public void WriteLine(string message)
