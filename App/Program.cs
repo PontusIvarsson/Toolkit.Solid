@@ -1,4 +1,6 @@
-﻿using App._1_S;
+﻿
+
+using App._2_0;
 using System;
 
 namespace App
@@ -7,10 +9,10 @@ namespace App
     {
         static void Main(string[] args)
         {
-            var s = new S();
-            var s_followed = new S_Followed(new Output());
-            s.ShowMePrinciple();
-            s_followed.ShowMePrinciple();
+
+            var s_Followed_O = new S_Followed_O(new Output());
+            s_Followed_O.ShowMePrinciple(new object[] { new SRP(), new OC()});
+
 
 
             Console.ReadKey();

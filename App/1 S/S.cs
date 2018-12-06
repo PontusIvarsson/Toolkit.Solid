@@ -6,36 +6,10 @@ namespace App._1_S
 {
     class S
     {
-
         public void ShowMePrinciple()
         {
             Console.WriteLine("Single Responsibility Principle (SRP)");
             Console.WriteLine(string.Format("SRP says: {0}", "Every software module should have only one reason to change"));
-        }
-    }
-
-    class S_Followed
-    {
-        private Output output;
-
-        public S_Followed(Output output)
-        {
-            this.output = output;
-        }
-
-        public void ShowMePrinciple()
-        {
-            output.WriteLine("Single Responsibility Principle (SRP)");
-            output.WriteLine(string.Format("SRP says: {0}", "Every software module should have only one reason to change"));
-        }
-    }
-
-    public class Output 
-    {
-
-        public void WriteLine(string message)
-        {
-            Console.WriteLine(message);
         }
     }
 }
