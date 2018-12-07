@@ -18,7 +18,7 @@ namespace App._1_S
             this.output = output;
         }
 
-        public void ShowMePrinciple()
+        public void ShowPrinciple()
         {
             output.WriteLine("Single Responsibility Principle (SRP)");
             output.WriteLine(string.Format("SRP says: {0}", "Every software module should have only one reason to change"));

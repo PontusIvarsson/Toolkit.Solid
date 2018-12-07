@@ -7,7 +7,6 @@
 
   <ItemGroup>
     <Folder Include="4 I\" />
-    <Folder Include="3 L\" />
     <Folder Include="5 D\" />
   </ItemGroup>
 

@@ -12,7 +12,7 @@ namespace App._2_0_Followed
             this.output = output;
         }
 
-        public void ShowMePrinciple(SOLID_Princaple[] principles)
+        public void ShowPrinciple(SOLID_Princaple[] principles)
         {
             foreach (var principle in principles)
             {
