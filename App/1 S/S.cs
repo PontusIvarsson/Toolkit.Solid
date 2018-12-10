@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace App._1_S
+namespace App._1
 {
     class S
     {

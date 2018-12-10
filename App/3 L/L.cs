@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using App._1;
 
-namespace App._2_0
+namespace App._3_L
 {
 
     class L
@@ -18,21 +16,51 @@ namespace App._2_0
         {
             foreach (var item in principles)
             {
-                if(item is SRP)
-                {
-                    output.WriteLine(((SRP)item).Name);
-                    output.WriteLine(((SRP)item).Description);
-                }
-                else if(item is OC)
-                {
-                    output.WriteLine(((OC)item).Name);
-                    output.WriteLine(((OC)item).Description);
-                }
-
+                output.WriteLine(((SOLID_Princaple)item).Name);
+                output.WriteLine(((SOLID_Princaple)item).Description);
+                output.WriteLine(((SOLID_Princaple)item).FormalDefinition);
             }
         }
     }
 
+    public class SOLID_Princaple
+    {
+        public string Name = null;
+        public string Description = null;
+        public string FormalDefinition = null;
+    }
 
+    public class SRP : SOLID_Princaple
+    {
+        public SRP()
+        {
+            Name = "Single Responsibility Principle(SRP)";
+            Description = string.Format("SRP says: {0}", "Every software module should have only one reason to change");
+        }
+    }
+
+    public class OC : SOLID_Princaple
+    {
+        public OC()
+        {
+            Name = "Open/Closed Principle";
+            Description = string.Format("The Open/closed Principle says: {0}", "A software module /class is open for extension and closed for modification");
+
+        }
+    }
+
+    public class LISKOV : SOLID_Princaple
+    {
+
+        public LISKOV()
+        {
+            Name = "Liskov substitution principle";
+
+            FormalDefinition = string.Format("In a computer program, if S is a subtype of T, then objects of type T may be replaced with objects of type S " +
+            "(i.e. an object of type T may be substituted with any object of a subtype S)" +
+            " without altering any of the desirable properties of the program (correctness, task performed, etc.)");
+        }
+
+    }
 
 }

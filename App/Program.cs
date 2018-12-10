@@ -1,6 +1,6 @@
 ﻿
-
-using App._2_0;
+using App._1;
+using App._3_L;
 using System;
 
 namespace App
@@ -11,7 +11,7 @@ namespace App
         {
 
             var l = new L(new Output());
-            l.ShowPrinciple(new object[] { new SRP(), new OC()});
+            l.ShowPrinciple(new object[] { new SRP(), new OC(), new LISKOV() });
 
 
 

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace App._1_S
+namespace App._1
 {
 
     /// <summary>
@@ -27,7 +27,6 @@ namespace App._1_S
 
     public class Output
     {
-
         public void WriteLine(string message)
         {
             Console.WriteLine(message);

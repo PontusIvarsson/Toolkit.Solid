@@ -1,8 +1,9 @@
-﻿using System;
+﻿using App._1;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace App._2_0
+namespace App._2
 {
 
     class S_Followed_O
@@ -43,13 +44,5 @@ namespace App._2_0
     {
         public string Name = "Open/Closed Principle";
         public string Description = string.Format("The Open/closed Principle says: {0}", "A software module /class is open for extension and closed for modification");
-    }
-
-    public class Output
-    {
-        public void WriteLine(string message)
-        {
-            Console.WriteLine(message);
-        }
     }
 }
