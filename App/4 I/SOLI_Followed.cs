@@ -19,6 +19,10 @@ namespace App._4_SOLI_Followed
                 output.WriteLine(((SOLID_Princaple)item).Description);
                 if(item is IHaveFormalDefinition)
                     output.WriteLine(((IHaveFormalDefinition)item).FormalDefinition);
+
+                if (item is IHaveExampleMotivation)
+                    output.WriteLine(((IHaveExampleMotivation)item).ExampleMotivation);
+
                 output.WriteLine("________________________________________");
             }
         }
@@ -33,6 +37,11 @@ namespace App._4_SOLI_Followed
     public interface IHaveFormalDefinition
     {
         string FormalDefinition { get;  }
+    }
+
+    public interface IHaveExampleMotivation
+    {
+        string ExampleMotivation { get; }
     }
 
     public class SRP : SOLID_Princaple
@@ -66,8 +75,19 @@ namespace App._4_SOLI_Followed
         }
 
         string IHaveFormalDefinition.FormalDefinition => _formalDefinition;
+    }
 
+    public class ISP : SOLID_Princaple, IHaveExampleMotivation
+    {
 
+        public ISP()
+        {
+            Name = "Interface Segregation Principle ";
+            Description = string.Format("ISP states that no client should be forced to depend on methods it does not use....");
+        }
+
+        public string ExampleMotivation => "Instead of having \"ExampleMotivation\" and \"FormalDefinition\" in the same interface. " +
+            "We have to separate interfaces, which does not force the client.";
     }
 
 }

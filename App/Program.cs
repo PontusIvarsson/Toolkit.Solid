@@ -11,7 +11,7 @@ namespace App
         {
 
             var l = new SOLI_Followed(new Output());
-            l.ShowPrinciple(new object[] { new SRP(), new OC(), new LISKOV() });
+            l.ShowPrinciple(new object[] { new SRP(), new OC(), new LISKOV(), new ISP() });
 
 
 
