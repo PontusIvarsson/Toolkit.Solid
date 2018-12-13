@@ -1,13 +1,18 @@
 ﻿using App._1;
+using System;
+using System.Collections.Generic;
+using System.Text;
 
-namespace App._3_L
+namespace App._4_I
 {
-
-    class L
+    /// <summary>
+    /// Liskov simplyfier: only inherit when "IS a" applies. Consider "HAS a".
+    /// </summary>
+    class SOL_Followed
     {
         private Output output;
 
-        public L(Output output)
+        public SOL_Followed(Output output)
         {
             this.output = output;
         }
@@ -18,7 +23,9 @@ namespace App._3_L
             {
                 output.WriteLine(((SOLID_Princaple)item).Name);
                 output.WriteLine(((SOLID_Princaple)item).Description);
-                output.WriteLine(((SOLID_Princaple)item).FormalDefinition);
+                if (item is LISKOV)
+                    output.WriteLine(((LISKOV)item).FormalDefinition);
+                output.WriteLine("________________________________________");
             }
         }
     }
@@ -27,7 +34,6 @@ namespace App._3_L
     {
         public string Name = null;
         public string Description = null;
-        public string FormalDefinition = null;
     }
 
     public class SRP : SOLID_Princaple
@@ -45,14 +51,15 @@ namespace App._3_L
         {
             Name = "Open/Closed Principle";
             Description = string.Format("The Open/closed Principle says: {0}", "A software module /class is open for extension and closed for modification");
-
         }
     }
 
     public class LISKOV : SOLID_Princaple
     {
 
-        
+
+        public string FormalDefinition = null;
+
         public LISKOV()
         {
             Name = "Liskov substitution principle";
@@ -64,3 +71,4 @@ namespace App._3_L
     }
 
 }
+
