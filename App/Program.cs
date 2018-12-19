@@ -13,8 +13,6 @@ namespace App
             var l = new SOLID_Followed(new Output());
             l.ShowPrinciple(new object[] { new SRP(), new OC(), new LISKOV(), new ISP(), new DIP() });
 
-
-
             Console.ReadKey();
         }
     }
