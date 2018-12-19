@@ -1,7 +1,13 @@
 ﻿using App._1;
+using System;
+using System.Collections.Generic;
+using System.Text;
 
-namespace App._4_SOLI_Followed
+namespace App._5_S
 {
+    /// <summary>
+    /// Liskov simplyfier: only inherit when "IS a" applies. Consider "HAS a".
+    /// </summary>
     class SOLI_Followed
     {
         private Output output;
@@ -17,12 +23,8 @@ namespace App._4_SOLI_Followed
             {
                 output.WriteLine(((SOLID_Princaple)item).Name);
                 output.WriteLine(((SOLID_Princaple)item).Description);
-                if(item is IHaveFormalDefinition)
-                    output.WriteLine(((IHaveFormalDefinition)item).FormalDefinition);
-
-                if (item is IHaveExampleMotivation)
-                    output.WriteLine(((IHaveExampleMotivation)item).ExampleMotivation);
-
+                if (item is LISKOV)
+                    output.WriteLine(((LISKOV)item).FormalDefinition);
                 output.WriteLine("________________________________________");
             }
         }
@@ -32,16 +34,6 @@ namespace App._4_SOLI_Followed
     {
         public string Name = null;
         public string Description = null;
-    }
-
-    public interface IHaveFormalDefinition
-    {
-        string FormalDefinition { get;  }
-    }
-
-    public interface IHaveExampleMotivation
-    {
-        string ExampleMotivation { get; }
     }
 
     public class SRP : SOLID_Princaple
@@ -62,32 +54,21 @@ namespace App._4_SOLI_Followed
         }
     }
 
-    public class LISKOV : SOLID_Princaple, IHaveFormalDefinition
+    public class LISKOV : SOLID_Princaple
     {
-        public string _formalDefinition = null;
+
+
+        public string FormalDefinition = null;
 
         public LISKOV()
         {
             Name = "Liskov substitution principle";
-            _formalDefinition = string.Format("In a computer program, if S is a subtype of T, then objects of type T may be replaced with objects of type S " +
+            FormalDefinition = string.Format("In a computer program, if S is a subtype of T, then objects of type T may be replaced with objects of type S " +
             "(i.e. an object of type T may be substituted with any object of a subtype S)" +
             " without altering any of the desirable properties of the program (correctness, task performed, etc.)");
         }
 
-        string IHaveFormalDefinition.FormalDefinition => _formalDefinition;
-    }
-
-    public class ISP : SOLID_Princaple, IHaveExampleMotivation
-    {
-
-        public ISP()
-        {
-            Name = "Interface Segregation Principle ";
-            Description = string.Format("ISP states that no client should be forced to depend on methods it does not use....");
-        }
-
-        public string ExampleMotivation => "Instead of having \"ExampleMotivation\" and \"FormalDefinition\" in the same interface. " +
-            "We have two separate interfaces, which does not force the client.";
     }
 
 }
+

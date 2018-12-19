@@ -1,12 +1,12 @@
 ﻿using App._1;
 
-namespace App._4_SOLI_Followed
+namespace App._5_SOLID_Followed
 {
-    class SOLI_Followed
+    class SOLID_Followed
     {
         private Output output;
 
-        public SOLI_Followed(Output output)
+        public SOLID_Followed(Output output)
         {
             this.output = output;
         }
@@ -88,6 +88,19 @@ namespace App._4_SOLI_Followed
 
         public string ExampleMotivation => "Instead of having \"ExampleMotivation\" and \"FormalDefinition\" in the same interface. " +
             "We have two separate interfaces, which does not force the client.";
+    }
+
+    public class DIP : SOLID_Princaple
+    {
+        public string _formalDefinition = null;
+
+        public DIP()
+        {
+            Name = "Dependency Inversion Principle";
+            Description = string.Format("The general idea of this principle is as simple as it is important: High-level modules, which provide complex logic, should be easily reusable and unaffected by changes in low-level modules, which provide utility features.");
+        }
+
+
     }
 
 }

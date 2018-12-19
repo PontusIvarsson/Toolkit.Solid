@@ -1,6 +1,6 @@
 ﻿
 using App._1;
-using App._4_SOLI_Followed;
+using App._5_SOLID_Followed;
 using System;
 
 namespace App
@@ -10,8 +10,8 @@ namespace App
         static void Main(string[] args)
         {
 
-            var l = new SOLI_Followed(new Output());
-            l.ShowPrinciple(new object[] { new SRP(), new OC(), new LISKOV(), new ISP() });
+            var l = new SOLID_Followed(new Output());
+            l.ShowPrinciple(new object[] { new SRP(), new OC(), new LISKOV(), new ISP(), new DIP() });
 
 
 
