@@ -10,12 +10,7 @@ namespace App._4_I
     /// </summary>
     class SOL_Followed
     {
-        private Output output;
-
-        public SOL_Followed(Output output)
-        {
-            this.output = output;
-        }
+        private Output output = new Output();
 
         public void ShowPrinciple(object[] principles)
         {

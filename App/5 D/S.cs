@@ -10,12 +10,7 @@ namespace App._5_S
     /// </summary>
     class SOLI_Followed
     {
-        private Output output;
-
-        public SOLI_Followed(Output output)
-        {
-            this.output = output;
-        }
+        private Output output = new Output();
 
         public void ShowPrinciple(object[] principles)
         {

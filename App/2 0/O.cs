@@ -8,12 +8,7 @@ namespace App._2
 
     class S_Followed_O
     {
-        private Output output;
-
-        public S_Followed_O(Output output)
-        {
-            this.output = output;
-        }
+        private Output output = new Output();
 
         public void ShowMePrinciple(object[] principles)
         {

@@ -5,12 +5,7 @@ namespace App._3_L
 
     class L
     {
-        private Output output;
-
-        public L(Output output)
-        {
-            this.output = output;
-        }
+        private Output output = new Output();
 
         public void ShowPrinciple(object[] principles)
         {

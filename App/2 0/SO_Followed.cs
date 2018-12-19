@@ -5,12 +5,7 @@ namespace App._2_0_Followed
 
     class SO_Followed
     {
-        private Output output;
-
-        public SO_Followed(Output output)
-        {
-            this.output = output;
-        }
+        private Output output = new Output();
 
         public void ShowPrinciple(SOLID_Princaple[] principles)
         {

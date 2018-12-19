@@ -11,13 +11,8 @@ namespace App._1
     /// </summary>
     class S_Followed
     {
-        private Output output;
-
-        public S_Followed(Output output)
-        {
-            this.output = output;
-        }
-
+        private Output output = new Output();
+        
         public void ShowPrinciple()
         {
             output.WriteLine("Single Responsibility Principle (SRP)");

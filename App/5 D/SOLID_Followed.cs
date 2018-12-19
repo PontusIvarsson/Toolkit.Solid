@@ -16,13 +16,16 @@ namespace App._5_SOLID_Followed
             foreach (var item in principles)
             {
                 output.WriteLine(((SOLID_Princaple)item).Name);
+                output.WriteLine("");
                 output.WriteLine(((SOLID_Princaple)item).Description);
                 if(item is IHaveFormalDefinition)
                     output.WriteLine(((IHaveFormalDefinition)item).FormalDefinition);
 
                 if (item is IHaveExampleMotivation)
+                { 
+                    output.WriteLine("*Example in this code:");
                     output.WriteLine(((IHaveExampleMotivation)item).ExampleMotivation);
-
+                }
                 output.WriteLine("________________________________________");
             }
         }
@@ -90,17 +93,18 @@ namespace App._5_SOLID_Followed
             "We have two separate interfaces, which does not force the client.";
     }
 
-    public class DIP : SOLID_Princaple
+    public class DIP : SOLID_Princaple, IHaveExampleMotivation
     {
         public string _formalDefinition = null;
 
         public DIP()
         {
             Name = "Dependency Inversion Principle";
-            Description = string.Format("The general idea of this principle is as simple as it is important: High-level modules, which provide complex logic, should be easily reusable and unaffected by changes in low-level modules, which provide utility features.");
+            Description = string.Format("The general idea of this principle is as simple as it is important: High-level modules, " +
+                "which provide complex logic, should be easily reusable and unaffected by changes in low-level modules, which provide utility features.");
         }
 
-
+        public string ExampleMotivation => "Instead of using new keyword, inside of class, we are pushing it as far \"out\" as posible.";
     }
 
 }
